@@ -1,25 +1,93 @@
-.app {
-  height: 100vh;
-  width: 100vw;
-  transition: background-color 1s ease-in;
-}
-
-.app__header,
-.app__main {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  font-family: "Raleway", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 /*  Search bar */
+*{
+  font-family: "Raleway", sans-serif;
+}
+
+html{
+  width: fit-content;
+}
+
+body{
+  margin: 0 auto;
+  padding: 0;
+  background: #9ccef4;
+  text-align: center;
+}
+
+.container-header{
+  padding: 1.5rem;
+  background-color: #759eda;
+  text-align: left;
+}
+
+button{
+  font-size: 1.2rem;
+  background: #5879c7;
+  padding: 10px 15px;
+  margin-left: 10px;
+  border: none;
+}
+
+button:focus-visible{
+  outline: none;
+}
 
 /* Current weather */
 
-div {
-  border: 5px solid red;
+.weather-today{  
+  margin: 0 auto;
+  padding: 2rem 2rem 0rem 2rem;
+  line-height: 1.4rem;
+  color:rgb(10, 10, 73);
+  width:250px;
+  line-height:2rem;
 }
+
+span{
+  font-weight:bold;
+} 
+
+.change-sizing{
+font-size: 12px;
+word-spacing: 8px;
+}
+.spacing{
+  margin-right: 10px;
+}
+
+input{
+  background: #759eda;
+  font-size: 1.2rem;
+  outline: 0;
+  color: white;
+  border: none;
+  padding: 5px;
+  width: 12rem;
+}
+input:focus{
+  border-bottom: 1px solid rgb(81, 126, 168);
+}
+::placeholder {
+  color: rgb(255, 255, 255);
+}
+.overcast{
+  color: white;
+}
+
+/*weather of the week*/
+.week-weather{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  }
+
+  .item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+
+  time{
+    margin: 5px;
+  }
