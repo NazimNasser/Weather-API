@@ -51,7 +51,9 @@ button:focus-visible{
   color:rgb(10, 10, 73);
   line-height:2rem;
 }
-
+.weather-today img {
+  width: 250px;
+}
 span{
   font-weight:bold;
 } 
@@ -80,6 +82,7 @@ word-spacing: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 140px;
   
   }
 
