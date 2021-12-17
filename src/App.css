@@ -3,10 +3,6 @@
   font-family: "Raleway", sans-serif;
 }
 
-html{
-  width: fit-content;
-}
-
 body{
   margin: 0 auto;
   padding: 0;
@@ -19,12 +15,26 @@ body{
   background-color: #759eda;
   text-align: left;
 }
+input{
+  background: #759eda;
+  font-size: 1.2rem;
+  outline: 0;
+  color: white;
+  border: none;
+  padding: 5px;
+  margin-right: 50px;
+}
+input:focus{
+  border-bottom: 1px solid rgb(81, 126, 168);
+}
+::placeholder {
+  color: rgb(255, 255, 255);
+}
 
 button{
   font-size: 1.2rem;
   background: #5879c7;
   padding: 10px 15px;
-  margin-left: 10px;
   border: none;
 }
 
@@ -39,7 +49,6 @@ button:focus-visible{
   padding: 2rem 2rem 0rem 2rem;
   line-height: 1.4rem;
   color:rgb(10, 10, 73);
-  width:250px;
   line-height:2rem;
 }
 
@@ -55,21 +64,6 @@ word-spacing: 8px;
   margin-right: 10px;
 }
 
-input{
-  background: #759eda;
-  font-size: 1.2rem;
-  outline: 0;
-  color: white;
-  border: none;
-  padding: 5px;
-  width: 12rem;
-}
-input:focus{
-  border-bottom: 1px solid rgb(81, 126, 168);
-}
-::placeholder {
-  color: rgb(255, 255, 255);
-}
 .overcast{
   color: white;
 }
@@ -79,6 +73,7 @@ input:focus{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  padding: 3rem 6rem;
   }
 
   .item{
