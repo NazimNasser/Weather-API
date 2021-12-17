@@ -1,17 +1,17 @@
-import React, { Component } from "react";
-import { render } from "react-dom";
-
-export default class WeatherItem extends Component {
-  render() {
-    return <div>Heello</div>;
-  }
-}
-export class SayHello extends Component {
+import React, { Component } from 'react'
+import snow from "../img/weather-icons/snow.svg";
+export class WeatherItem extends Component {
   render() {
     return (
-      <div style={{ color: this.props.color, backgroundColor: "yellow" }}>
-        Hello {this.props.name}
+      <div className="weather-today">
+        <img src={snow} alt="cloud-img"/>
+        <p><span className="overcast">overcast clouds</span></p>
+        <p><span className="spacing">Temperature</span> 10&#176; to 11&#176; C</p>
+        <p className="change-sizing"><span>Humidity</span> 78% <span>Pressure</span> 1008.48</p>
       </div>
-    );
+    )
   }
 }
+
+export default WeatherItem
+
