@@ -6,8 +6,8 @@ export class WeatherItem extends Component {
       <div className="weather-today">
         <img src={snow} alt="cloud-img"/>
         <p><span className="overcast">overcast clouds</span></p>
-        <p><span className="spacing">Temperature</span> 10&#176; to 11&#176; C</p>
-        <p className="change-sizing"><span>Humidity</span> 78% <span>Pressure</span> 1008.48</p>
+        <p><span className="spacing">Temperature</span> {this.props.minTemp}&#176; to {this.props.maxTemp}&#176; C</p>
+        <p className="change-sizing"><span>Humidity</span> {this.props.humidity}% <span>Pressure</span> {this.props.Pressure}</p>
       </div>
     )
   }
