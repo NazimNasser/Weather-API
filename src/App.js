@@ -16,15 +16,21 @@ class App extends Component {
     super(props);
     this.state = {
       weatherList:undefined,
-      country:""
+      country:"",
+      error:null
       
     };
   }
 
   getWeatherList= (country) =>{
     fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${country}&cnt=8&units=metric&appid=${API_Key}`)
-    .then(res=> res.json())
-    .then(data=>this.setState({weatherList:data.list}))
+    .then(res=>{
+      if(!res.ok){
+        this.setState({error:'Could not find Country please try again!'});
+      } else{
+        return res.json()
+      }})
+    .then(data=>this.setState({weatherList:data.list,error:null}))
   }
 
   handleInputChange = value => {
@@ -85,7 +91,18 @@ class App extends Component {
           </div>
       </div>
 
-    );}else{
+    );}else if (this.state.error) {
+      return ( 
+      <div className="app">
+         <header className="container-header">
+            <Search handleInput={this.handleInputChange}/>
+        </header>
+        <div>
+            <h1>{this.state.error}</h1>
+        </div>
+      </div>
+      );
+    }else{
       return (
       <div className="app">
 
