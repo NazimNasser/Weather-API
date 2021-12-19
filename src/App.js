@@ -7,28 +7,38 @@ import FakeWeather from "./data/FakeWeather.json";
 // import fakeWeatherData from "./fakeWeatherData.json";
 
 import "./App.css";
-let celsius =(f)=>{return Math.round(f-273.15)};
+let celsius =(f)=>{return Math.round(f)};
 let justTime =(t)=>{return t.split(" ")[1].substring(0,5)};
+const API_Key = "145f2b3bf9cdedb06a0651de14dc1045";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      weatherList:FakeWeather["list"]
+      weatherList:undefined,
+      country:""
       
     };
   }
 
+  getWeatherList= (country) =>{
+    fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${country}&cnt=8&units=metric&appid=${API_Key}`)
+    .then(res=> res.json())
+    .then(data=>this.setState({weatherList:data.list}))
+  }
+
   handleInputChange = value => {
-    this.setState({ weatherList: FakeWeather["list"] });
+    this.setState({ country: value });
+    this.getWeatherList(value)
   };
 
   render() {
+    if(this.state.country !=="" && this.state.weatherList !== undefined){
     return (
       <div className="app">
 
         <header className="container-header">
-            <Search/>
+            <Search handleInput={this.handleInputChange}/>
         </header>
         <div className="main-weather">
               <WeatherItem
@@ -65,7 +75,14 @@ class App extends Component {
           </div>
       </div>
 
-    );
+    );}else{
+      return (
+      <div className="app">
+
+        <header className="container-header">
+            <Search handleInput={this.handleInputChange}/>
+        </header>
+      </div>)}
   }
 }
 
