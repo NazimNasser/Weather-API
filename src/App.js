@@ -47,6 +47,8 @@ class App extends Component {
               minTemp={celsius(this.state.weatherList[0].main.temp_min)}
               maxTemp={celsius(this.state.weatherList[0].main.temp_max)}
               iconId={this.state.weatherList[0].weather[0].id}
+              sea={this.state.weatherList[0].main.sea_level}
+              wind={this.state.weatherList[0].wind.speed}
               />
 
             <div className="week-weather">

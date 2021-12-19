@@ -27,6 +27,7 @@ export class WeatherItem extends Component {
         <p><span className="overcast">overcast clouds</span></p>
         <p><span className="spacing">Temperature</span> {this.props.minTemp}&#176; to {this.props.maxTemp}&#176; C</p>
         <p className="change-sizing"><span>Humidity</span> {this.props.humidity}% <span>Pressure</span> {this.props.Pressure}</p>
+        <p className="change-sizing"><span>Wind </span> {this.props.wind}m/s <span>Sea </span> {this.props.sea}hPa</p>
       </div>
     )
   }
