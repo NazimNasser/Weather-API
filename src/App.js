@@ -46,30 +46,38 @@ class App extends Component {
               Pressure={this.state.weatherList[0].main.pressure}
               minTemp={celsius(this.state.weatherList[0].main.temp_min)}
               maxTemp={celsius(this.state.weatherList[0].main.temp_max)}
+              iconId={this.state.weatherList[0].weather[0].id}
               />
 
             <div className="week-weather">
               <DailyWeather
               dt_txt={justTime(this.state.weatherList[1].dt_txt)}
-              temp={celsius(this.state.weatherList[1].main.temp)}/>
+              temp={celsius(this.state.weatherList[1].main.temp)}
+              iconId={this.state.weatherList[1].weather[0].id}/>
               <DailyWeather
               dt_txt={justTime(this.state.weatherList[2].dt_txt)}
-              temp={celsius(this.state.weatherList[2].main.temp)}/>
+              temp={celsius(this.state.weatherList[2].main.temp)}
+              iconId={this.state.weatherList[2].weather[0].id}/>
               <DailyWeather
               dt_txt={justTime(this.state.weatherList[3].dt_txt)}
-              temp={celsius(this.state.weatherList[3].main.temp)}/>
+              temp={celsius(this.state.weatherList[3].main.temp)}
+              iconId={this.state.weatherList[3].weather[0].id}/>
               <DailyWeather
               dt_txt={justTime(this.state.weatherList[4].dt_txt)}
-              temp={celsius(this.state.weatherList[4].main.temp)}/>
+              temp={celsius(this.state.weatherList[4].main.temp)}
+              iconId={this.state.weatherList[4].weather[0].id}/>
               <DailyWeather
               dt_txt={justTime(this.state.weatherList[5].dt_txt)}
-              temp={celsius(this.state.weatherList[5].main.temp)}/>
+              temp={celsius(this.state.weatherList[5].main.temp)}
+              iconId={this.state.weatherList[5].weather[0].id}/>
               <DailyWeather
               dt_txt={justTime(this.state.weatherList[6].dt_txt)}
-              temp={celsius(this.state.weatherList[6].main.temp)}/>
+              temp={celsius(this.state.weatherList[6].main.temp)}
+              iconId={this.state.weatherList[6].weather[0].id}/>
               <DailyWeather
               dt_txt={justTime(this.state.weatherList[7].dt_txt)}
-              temp={celsius(this.state.weatherList[7].main.temp)}/>
+              temp={celsius(this.state.weatherList[7].main.temp)}
+              iconId={this.state.weatherList[7].weather[0].id}/>
             </div>
 
           </div>
